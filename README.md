@@ -10,17 +10,15 @@ The goal of this repo is to deepen my understanding of Python by applying concep
 
 Each folder in this repository is a standalone project, often inspired by or aligned with milestones on the Python roadmap. Projects are grouped by topic or learning goal.
 
-python-projects/
-├── cli-tools/
-│   ├── todo-app/
-│   └── calculator/
-├── web-dev/
-│   ├── flask-blog/
-│   └── api-with-fastapi/
-├── automation/
-│   ├── file-renamer/
-│   └── web-scraper/
-
+```bash
+python-project-collection
+├── apis
+├── automation
+├── cli-tools
+│   └── task-cli.py
+├── README.md
+└── web-app
+```
 
 ## 📌 Current Focus Areas
 
