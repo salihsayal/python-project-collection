@@ -10,6 +10,18 @@ The goal of this repo is to deepen my understanding of Python by applying concep
 
 Each folder in this repository is a standalone project, often inspired by or aligned with milestones on the Python roadmap. Projects are grouped by topic or learning goal.
 
+python-projects/
+├── cli-tools/
+│   ├── todo-app/
+│   └── calculator/
+├── web-dev/
+│   ├── flask-blog/
+│   └── api-with-fastapi/
+├── automation/
+│   ├── file-renamer/
+│   └── web-scraper/
+
+
 ## 📌 Current Focus Areas
 
 - ✅ Python basics & syntax
@@ -21,15 +33,20 @@ Each folder in this repository is a standalone project, often inspired by or ali
 
 _(This list grows as I progress through the roadmap.)_
 
-## 🧠 Learning Source
+## 🧠 Learning Sources
 
-All project ideas and learning topics are based on:
+This repository is built as part of my structured journey to learn Python by doing, with guidance from curated learning resources:
 
-📚 [roadmap.sh/python](https://roadmap.sh/python)  
-🔗 Additional documentation from:  
-- [Python Docs](https://docs.python.org/3/)
-- [Real Python](https://realpython.com/)
-- [Stack Overflow](https://stackoverflow.com/)
+- 🛣️ [roadmap.sh/python](https://roadmap.sh/python)  
+  Provides the big-picture structure for what to learn and in what order.
+
+- 📘 [Python Official Documentation](https://docs.python.org/3/)  
+  My go-to reference for language syntax, built-in functions, modules, and best practices.
+
+- ⚡ [Learn Python in Y Minutes](https://learnxinyminutes.com/docs/python/)  
+  A fast, concise language tour — perfect for refreshing syntax or discovering neat tricks.
+
+This mix of high-level guidance, deep reference material, and quick-syntax reviews helps me balance structured progression with hands-on practice.
 
 ## 📬 Contributions & Feedback
 
