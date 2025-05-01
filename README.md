@@ -35,18 +35,27 @@ _(This list grows as I progress through the roadmap.)_
 
 ## 🧠 Learning Sources
 
-This repository is built as part of my structured journey to learn Python by doing, with guidance from curated learning resources:
+This repository is part of my structured learning journey, combining hands-on coding with trusted resources:
 
 - 🛣️ [roadmap.sh/python](https://roadmap.sh/python)  
-  Provides the big-picture structure for what to learn and in what order.
+  My main guide for structuring what to learn and in what order.
 
 - 📘 [Python Official Documentation](https://docs.python.org/3/)  
-  My go-to reference for language syntax, built-in functions, modules, and best practices.
+  The authoritative source for Python syntax, built-in features, and standard libraries.
 
 - ⚡ [Learn Python in Y Minutes](https://learnxinyminutes.com/docs/python/)  
-  A fast, concise language tour — perfect for refreshing syntax or discovering neat tricks.
+  A fast, minimalist walkthrough of Python syntax — great for quick reviews or learning patterns.
 
-This mix of high-level guidance, deep reference material, and quick-syntax reviews helps me balance structured progression with hands-on practice.
+- 💬 [Stack Overflow](https://stackoverflow.com/)  
+  For resolving specific issues, understanding error messages, and learning from community answers.
+
+- 🌐 [W3Schools – Python](https://www.w3schools.com/python/)  
+  Helpful for quick lookups, syntax reminders, and beginner-friendly examples.
+
+- 🧠 [GeeksforGeeks – Python](https://www.geeksforgeeks.org/python-programming-language/)  
+  Useful for algorithm explanations, coding patterns, and deeper topic overviews.
+
+This mix of structured roadmaps, official docs, syntax guides, and community Q&A helps me balance fundamentals with practical coding experience.
 
 ## 📬 Contributions & Feedback
 
