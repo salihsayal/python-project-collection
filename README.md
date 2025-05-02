@@ -15,7 +15,10 @@ python-project-collection
 ├── apis
 ├── automation
 ├── cli-tools
-│   └── task-cli.py
+│   ├── github-activity
+│   │   └── github-activity
+│   └── task-cli
+│       └── task-cli
 ├── README.md
 └── web-app
 ```
