@@ -1,2 +1,73 @@
 #!/usr/bin/env python3
 
+import sys
+import requests
+import json
+
+event_descriptions = {
+    "PushEvent": lambda repo, count: f"Pushed {count} commit{'s' if count != 1 else ''} to {repo}",
+    "PullRequestEvent": lambda repo, count: f"Opened {count} pull request{'s' if count != 1 else ''} in {repo}",
+    "IssuesEvent": lambda repo, count: f"Opened {count} issue{'s' if count != 1 else ''} in {repo}",
+    "WatchEvent": lambda repo, count: f"Starred {repo}",
+    "ForkEvent": lambda repo, count: f"Forked {repo}",
+    "IssueCommentEvent": lambda repo, count: f"Commented on {count} issue{'s' if count != 1 else ''} in {repo}",
+    "CreateEvent": lambda repo, count: f"Created something in {repo}",
+    "DeleteEvent": lambda repo, count: f"Deleted something in {repo}",
+    "ReleaseEvent": lambda repo, count: f"Published {count} release{'s' if count != 1 else ''} in {repo}",
+    "PullRequestReviewEvent": lambda repo, count: f"Reviewed pull request(s) in {repo}",
+    "PullRequestReviewCommentEvent": lambda repo, count: f"Commented on pull request review(s) in {repo}",
+    "CommitCommentEvent": lambda repo, count: f"Commented on {count} commit{'s' if count != 1 else ''} in {repo}",
+    "PublicEvent": lambda repo, count: f"Made {repo} public",
+    "MemberEvent": lambda repo, count: f"Added a collaborator to {repo}",
+    "GollumEvent": lambda repo, count: f"Updated the wiki of {repo}",
+    "SponsorshipEvent": lambda repo, count: f"Sponsorship activity in {repo}",
+    "PullRequestReviewThreadEvent": lambda repo, count: f"Participated in a review thread in {repo}",
+}
+
+def summarize_events(events):
+    summary = {}
+    for event in events:
+        key = (event.get('type'), event.get('repo').get('name'))
+        if key in summary:
+            summary[key] += 1
+        else:
+            summary[key] = 1
+    return summary
+
+def print_events(events):
+    summary = summarize_events(events)
+    for (event_type, repo), count in summary.items():
+        if event_type in event_descriptions:
+            print(f"- {event_descriptions[event_type](repo, count)}")
+        else:
+            print(f"- {event_type} ({count}) in {repo}")
+
+
+def fetch_github_events(url):
+    try:
+        res = requests.get(url)
+        res.raise_for_status()
+        response = res.json()
+    except requests.exceptions.RequestException as e:
+        print(f"Request failed: {res}")
+        print("Maybe invalid username?")
+        sys.exit(1)
+    return response
+
+def get_username():
+    try:
+        username = sys.argv[1]
+    except IndexError:
+        print("Error: Please name a user")
+        sys.exit(1)
+    return username
+
+def main():
+    username = get_username();
+    url = f'https://api.github.com/users/{username}/events'
+    events = fetch_github_events(url)
+    print(f"Recent activities of GitHub user {username}")
+    print_events(events)
+
+if __name__ == "__main__":
+    main()
