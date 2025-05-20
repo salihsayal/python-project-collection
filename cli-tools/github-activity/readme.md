@@ -19,7 +19,7 @@ Then install the required dependency:
 
 ## Usage
 ```bash
-    chmod +x github_activity // make it executable
+    chmod +x github_activity # make it executable
     ./github_activity <username>
 ```
 
