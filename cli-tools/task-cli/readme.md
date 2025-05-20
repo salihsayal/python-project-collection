@@ -20,28 +20,28 @@ Run the CLI with the following commands:
 ### Add a Task
 
 ```bash
-    task-cli add "Buy groceries"
+    ./task-cli add "Buy groceries"
     # Output: Task added successfully (ID: 1)
 ```
 
 ### Update or Delete a Task
 ```bash
-    task-cli update 1 "Buy groceries and cook dinner"
-    task-cli delete 1
+    ./task-cli update 1 "Buy groceries and cook dinner"
+    ./task-cli delete 1
 ```
 
 ### Mark Task as In Progress or Done
 ```bash
-    task-cli mark-in-progress 1
-    task-cli mark-done 1
+    ./task-cli mark-in-progress 1
+    ./task-cli mark-done 1
 ```
 
 ### List Tasks
 ```bash
-    task-cli list            # List all tasks
-    task-cli list done       # List completed tasks
-    task-cli list todo       # List pending tasks
-    task-cli list in-progress # List in-progress tasks
+    ./task-cli list            # List all tasks
+    ./task-cli list done       # List completed tasks
+    ./task-cli list todo       # List pending tasks
+    ./task-cli list in-progress # List in-progress tasks
 ```
 
 ## Task Properties
@@ -54,7 +54,7 @@ Each task in the JSON file includes the following:
 
 ## Installation
 No external libraries required – uses only the standard library.
-Make sure to run the script with Python 3 installed. Place the script in your PATH or alias it as `task-cli`.
+Make sure to run the script with Python 3 installed. 
 
 ## Notes
 - Tasks are stored in a `tasks.json` file in the current working directory.
