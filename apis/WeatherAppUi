@@ -1,0 +1,16 @@
+#!/usr/bin/env python3
+from WeatherApi import fetchWeatherData 
+import argparse
+
+parser = argparse.ArgumentParser(prog='WeatherAppUi')
+parser.add_argument('--Country', required=True, help='Name of the Country')
+parser.add_argument('--City', required=True, help='Name of the City')
+args = parser.parse_args()
+
+def main():  
+    response = fetchWeatherData(args.Country, args.City)
+    print(response)
+
+
+if __name__ == "__main__":
+	main()
