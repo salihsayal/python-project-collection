@@ -7,8 +7,7 @@ import requests
 
 load_dotenv()
 api_key = os.getenv("WEATHER_API_KEY")
-url = 'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{0}%20{1}?unitGroup=us&key={2}&contentType=json'
-
+url = 'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{0}%20{1}?unitGroup=metric&key={2}&contentType=json'
 def fetchWeatherData(country, city):
     try:
         res = requests.get(url.format(country, city, api_key))
